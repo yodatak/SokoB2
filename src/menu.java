@@ -2,22 +2,26 @@
  * Created by yoyonice on 27/02/14.
  */
 
-    import java.awt.BorderLayout;
-    import java.awt.Color;
-    import java.awt.Dimension;
-    import java.awt.event.ActionEvent;
-    import java.awt.event.ActionListener;
-    import javax.swing.BorderFactory;
-    import javax.swing.ImageIcon;
-    import javax.swing.JButton;
-    import javax.swing.JComboBox;
-    import javax.swing.JDialog;
-    import javax.swing.JFrame;
-    import javax.swing.JLabel;
-    import javax.swing.JPanel;
-    import javax.swing.JRadioButton;
-    import javax.swing.ButtonGroup;
-    import javax.swing.JTextField;
-public class Menu {
 
+import javax.swing.JFrame;
+        import javax.swing.JLabel;
+
+public class menu {
+    public static void main(String[] args) {
+        // on crée une fenêtre dont le titre est "Hello World!"
+        JFrame frame = new JFrame("Hello World!");
+        // la fenêtre doit se fermer quand on clique sur la croix rouge
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+        // on ajoute le texte "Hello, World!" dans la fenêtre
+        frame.getContentPane().add((new JLabel("Hello, World!")));
+
+        // on demande d'attribuer une taille minimale à la fenêtre
+        //  (juste assez pour voir tous les composants)
+        frame.pack();
+        // on centre la fenêtre
+        frame.setLocationRelativeTo(null);
+        // on rend la fenêtre visible
+        frame.setVisible(true);
+    }
 }
