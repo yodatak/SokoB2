@@ -1,13 +1,59 @@
 /**
- * Created by yoyonice on 27/02/14.
+ * la classe
+
+Menu
+        current_level
+        player_name_store()
+        choisir_lvl()
+        get_curr_lvl()
+        set_curr_lvl()
  */
-
-
 import javax.swing.JFrame;
         import javax.swing.JLabel;
+import java.util.Scanner;
+
 
 public class menu {
-    public static void main(String[] args) {
+
+    //setter de nom
+    public void setNom(String nom) {
+        System.out.println("Veuillez saisir votre nom :");
+        Scanner sc = new Scanner(System.in);
+         this.Nom = sc.nextLine();
+    }
+    //getter de nom
+    public String getNom() {
+        return Nom;
+    }
+
+    private String Nom;
+
+    //setter de level
+    public void setLevel(int level) {
+        System.out.println("Veuillez saisir le level :");
+        Scanner sc = new Scanner(System.in);
+        this.Level = sc.nextInt();
+    }
+    //getter de level
+    public int getLevel() {
+        return Level;
+    }
+
+    private int Level;
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
         // on crée une fenêtre dont le titre est "Hello World!"
         JFrame frame = new JFrame("Hello World!");
         // la fenêtre doit se fermer quand on clique sur la croix rouge
@@ -23,5 +69,6 @@ public class menu {
         frame.setLocationRelativeTo(null);
         // on rend la fenêtre visible
         frame.setVisible(true);
-    }
+
+*/
 }
