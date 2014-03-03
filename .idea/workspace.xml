@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9a37c72-3a2b-4d4d-b1a9-c3ce60a4a4b9" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Map.java" afterPath="$PROJECT_DIR$/src/Map.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Score.java" afterPath="$PROJECT_DIR$/src/Score.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cell.java" afterPath="$PROJECT_DIR$/src/cell.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SokoB2.iws" />
@@ -73,7 +75,7 @@
       <file leaf-file-name="main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="23" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+            <state line="18" column="1" selection-start="511" selection-end="511" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
               <folding />
             </state>
           </provider>
@@ -82,17 +84,22 @@
       <file leaf-file-name="Drawable.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Drawable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="17" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+            <state line="6" column="0" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Score.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Score.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Score.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="287" selection-end="287" vertical-scroll-proportion="0.5862069" vertical-offset="0" max-vertical-offset="551">
-              <folding />
+            <state line="8" column="0" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+              <folding>
+                <element signature="e#57#58#0" expanded="true" />
+                <element signature="e#85#86#0" expanded="true" />
+                <element signature="e#124#125#0" expanded="true" />
+                <element signature="e#158#159#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -100,16 +107,16 @@
       <file leaf-file-name="cell.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="90" selection-end="90" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+            <state line="5" column="4" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Map.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Map.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Map.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="44" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+            <state line="6" column="40" selection-start="196" selection-end="196" vertical-scroll-proportion="0.16721311" vertical-offset="0" max-vertical-offset="610">
               <folding />
             </state>
           </provider>
@@ -118,8 +125,10 @@
       <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="578">
-              <folding />
+            <state line="4" column="29" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0" vertical-offset="31" max-vertical-offset="595">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -137,17 +146,18 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Map.java" />
         <option value="$PROJECT_DIR$/src/menu.java" />
-        <option value="$PROJECT_DIR$/src/Game.java" />
-        <option value="$PROJECT_DIR$/src/cell.java" />
         <option value="$PROJECT_DIR$/src/main.java" />
+        <option value="$PROJECT_DIR$/src/cell.java" />
+        <option value="$PROJECT_DIR$/src/Game.java" />
+        <option value="$PROJECT_DIR$/src/Drawable.java" />
         <option value="$PROJECT_DIR$/src/Score.java" />
+        <option value="$PROJECT_DIR$/src/Map.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="683" />
+    <option name="width" value="870" />
     <option name="height" value="768" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -208,24 +218,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SokoB2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SokoB2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -529,7 +521,7 @@
       <workItem from="1393679828933" duration="5991000" />
       <workItem from="1393833233530" duration="1056000" />
       <workItem from="1393838782734" duration="1984000" />
-      <workItem from="1393843929432" duration="800000" />
+      <workItem from="1393843929432" duration="3487000" />
     </task>
     <task id="LOCAL-00001" summary="create class Map&#10;">
       <created>1393513003052</created>
@@ -555,14 +547,22 @@
       <created>1393844502001</created>
       <updated>1393844502001</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;">
+      <created>1393844736663</created>
+      <updated>1393844736663</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;">
+      <created>1393845121480</created>
+      <updated>1393845121480</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11982000" />
+    <option name="totallyTimeSpent" value="14669000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="683" height="768" extended-state="0" />
+    <frame x="0" y="0" width="870" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -584,7 +584,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30584708" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23887588" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -634,7 +634,12 @@
     <entry file="file://$PROJECT_DIR$/src/Score.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="0" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="663">
-          <folding />
+          <folding>
+            <element signature="e#57#58#0" expanded="true" />
+            <element signature="e#85#86#0" expanded="true" />
+            <element signature="e#124#125#0" expanded="true" />
+            <element signature="e#158#159#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -655,7 +660,9 @@
     <entry file="file://$PROJECT_DIR$/src/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="578">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -676,7 +683,12 @@
     <entry file="file://$PROJECT_DIR$/src/Score.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="26" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="663">
-          <folding />
+          <folding>
+            <element signature="e#57#58#0" expanded="true" />
+            <element signature="e#85#86#0" expanded="true" />
+            <element signature="e#124#125#0" expanded="true" />
+            <element signature="e#158#159#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -690,7 +702,9 @@
     <entry file="file://$PROJECT_DIR$/src/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="13" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="374">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -711,14 +725,21 @@
     <entry file="file://$PROJECT_DIR$/src/Score.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="8" selection-start="74" selection-end="74" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="493">
-          <folding />
+          <folding>
+            <element signature="e#57#58#0" expanded="true" />
+            <element signature="e#85#86#0" expanded="true" />
+            <element signature="e#124#125#0" expanded="true" />
+            <element signature="e#158#159#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="13" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="374">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -797,44 +818,51 @@
         <state line="107" column="19" selection-start="3638" selection-end="3638" vertical-scroll-proportion="0.33144477" vertical-offset="1141" max-vertical-offset="52292" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/cell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="4" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="578">
-          <folding />
+        <state line="4" column="29" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0" vertical-offset="31" max-vertical-offset="595">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Drawable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="17" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="90" selection-end="90" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="23" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="44" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+        <state line="6" column="0" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Score.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="287" selection-end="287" vertical-scroll-proportion="0.5862069" vertical-offset="0" max-vertical-offset="551">
+        <state line="8" column="0" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <folding>
+            <element signature="e#57#58#0" expanded="true" />
+            <element signature="e#85#86#0" expanded="true" />
+            <element signature="e#124#125#0" expanded="true" />
+            <element signature="e#158#159#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="1" selection-start="511" selection-end="511" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="40" selection-start="196" selection-end="196" vertical-scroll-proportion="0.16721311" vertical-offset="0" max-vertical-offset="610">
           <folding />
         </state>
       </provider>
