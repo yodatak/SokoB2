@@ -20,4 +20,14 @@ public class Score {
     }
 
     private int score;
+
+    public int getEtat() {
+        return etat;
+    }
+
+    public void setEtat(int etat) {
+        this.etat = etat;
+    }
+
+    private int etat;
 }
