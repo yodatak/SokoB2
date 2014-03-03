@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9a37c72-3a2b-4d4d-b1a9-c3ce60a4a4b9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Score.java" afterPath="$PROJECT_DIR$/src/Score.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cell.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SokoB2.iws" />
@@ -88,15 +88,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Score.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Score.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Score.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="26" selection-start="313" selection-end="313" vertical-scroll-proportion="0.5862069" vertical-offset="0" max-vertical-offset="595">
+            <state line="23" column="26" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
               <folding>
                 <element signature="e#339#340#0" expanded="true" />
                 <element signature="e#376#377#0" expanded="true" />
                 <element signature="e#408#409#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cell.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/cell.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="6" selection-start="70" selection-end="70" vertical-scroll-proportion="0.120567374" vertical-offset="0" max-vertical-offset="564">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -136,6 +145,7 @@
         <option value="$PROJECT_DIR$/src/menu.java" />
         <option value="$PROJECT_DIR$/src/main.java" />
         <option value="$PROJECT_DIR$/src/Score.java" />
+        <option value="$PROJECT_DIR$/src/cell.java" />
       </list>
     </option>
   </component>
@@ -528,7 +538,7 @@
       <workItem from="1393512953963" duration="603000" />
       <workItem from="1393513704242" duration="1186000" />
       <workItem from="1393679828933" duration="5991000" />
-      <workItem from="1393833233530" duration="979000" />
+      <workItem from="1393833233530" duration="1056000" />
     </task>
     <task id="LOCAL-00001" summary="create class Map&#10;">
       <created>1393513003052</created>
@@ -542,11 +552,15 @@
       <created>1393690844517</created>
       <updated>1393690844517</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;">
+      <created>1393834942288</created>
+      <updated>1393834942288</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9121000" />
+    <option name="totallyTimeSpent" value="9198000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="683" height="768" extended-state="0" />
@@ -565,6 +579,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32743362" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32668713" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -576,7 +591,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32668713" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.398773" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -652,7 +666,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="13498" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="13498">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/menu.java">
@@ -671,7 +687,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="13073" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="13073">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/menu.java">
@@ -732,7 +750,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="12971" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="12971">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_45/src.zip!/java/lang/String.java">
@@ -770,12 +790,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Score.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="26" selection-start="313" selection-end="313" vertical-scroll-proportion="0.5862069" vertical-offset="0" max-vertical-offset="595">
+        <state line="23" column="26" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
           <folding>
             <element signature="e#339#340#0" expanded="true" />
             <element signature="e#376#377#0" expanded="true" />
             <element signature="e#408#409#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="6" selection-start="70" selection-end="70" vertical-scroll-proportion="0.120567374" vertical-offset="0" max-vertical-offset="564">
+          <folding />
         </state>
       </provider>
     </entry>
