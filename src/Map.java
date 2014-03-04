@@ -12,19 +12,19 @@ public class Map {
     Vector tab=new Vector();
     /////////////////attributs de class map
 
-    public void setHauteur(int hauteur) { //////////// set hauteur
+    public void set_Haut(int hauteur) { //////////// set hauteur
         this.hauteur = hauteur;
     }
 
-    public void setLargeur(int largeur) { /////////// set largeur
+    public void set_Larg(int largeur) { /////////// set largeur
         this.largeur = largeur;
     }
 
-    public int getHauteur() {   /////////////// get hauteur
+    public int get_Haut() {   /////////////// get hauteur
         return hauteur;
     }
 
-    public int getLargeur() { //////////// get largeur
+    public int get_Larg() { //////////// get largeur
         return largeur;
     }
 
