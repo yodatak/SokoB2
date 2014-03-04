@@ -27,6 +27,8 @@ public class Map {
     public int getLargeur() { //////////// get largeur
         return largeur;
     }
+
+    //draw sera faite ce soir :)
 }
 
 
