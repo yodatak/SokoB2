@@ -1,7 +1,6 @@
 import java.io.*;
 import java.util.ArrayList;
-import java.util.List;
-//implémentation des vectors
+import java.util.Scanner;
 
 /**
  * Created by Lachenayefred on 27/02/14.
@@ -22,20 +21,45 @@ public class Map implements Drawable {
         return width;
     }
 
+    /*
+    Charge une map en mémoire
+     */
     public void load(InputStream is) throws IOException {
-        DataInputStream dis = new DataInputStream(is);
+        Scanner sc = new Scanner(is);
 
-        height = dis.readInt();
-        width = dis.readInt();
+        tab = new ArrayList<Cell>();
 
-        tab = new ArrayList<Cell>(height * width);
+        String line = null;
 
-        for(int i = 0; i < height; ++i){
-            for(int j = 0; j < width; ++j){
-                tab.set(i * width + j, new Blank());
+        do{
+            //On récupère la ligne
+            line = sc.nextLine();
+
+            if(width == 0)//Si on n'a pas encore récupéré la largeur
+                width = line.length();
+            else if(line.length() >0 && width != line.length())//Si la largeur a changé
+                throw new IOException("All lines are not same length");
+
+            //Pour chaque caractère de la ligne
+            for(int j = 0; j < line.length(); ++j){
+                Cell cell = null;
+                switch(line.charAt(j)){
+                    case '=': cell = new Wall(); break;
+                    case ' ': cell = new Blank(); break;
+                    case 'X': cell = new Player(); break;
+                    case 'Y': cell = new PlayerOnStorage(); break;
+                    case 'O': cell = new StorageLocation(); break;
+                    case 'B': cell = new Box(); break;
+                    case 'D': cell = new BoxOnStorage(); break;
+                    default: throw new IOException("Unknown Cell type " + line.charAt(j));
+                }
+                //On ajoute une cellule
+                tab.add(cell);
             }
-            is.skip('\n');
-        }
+        }while(line.length() > 0);
+
+        //On calcule la hauteur en fonction du nombre total de cellules
+        height = tab.size()/width;
     }
 
     /*
@@ -60,8 +84,6 @@ public class Map implements Drawable {
             os.write('\n');
         }
     }
-
-    //draw sera faite ce soir :)
 }
 
 
