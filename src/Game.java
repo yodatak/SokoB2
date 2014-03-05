@@ -71,4 +71,5 @@ public class Game implements Drawable {
     public void draw(OutputStream os) throws IOException {
         currentMap.draw(os);
     }
+
 }
