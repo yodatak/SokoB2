@@ -45,24 +45,55 @@ public class Map implements Drawable {
 
             //Pour chaque caractère de la ligne
             for(int j = 0; j < line.length(); ++j){
+
                 Cell cell = null;
-                switch(line.charAt(j)){
-                    case '=': cell = new Wall(); break;
-                    case ' ': cell = new Blank(); break;
-                    case 'O': cell = new StorageLocation(); break;
-                    case 'B': cell = new Box(); break;
-                    case 'D': cell = new BoxOnStorage(); break;
-                    case 'X':
-                        cell = new Player();
-                        playerX = j;
-                        playerY = tab.size()/width;
-                        break;
-                    case 'Y':
-                        cell = new PlayerOnStorage();
-                        playerX = j;
-                        playerY = tab.size()/width;
-                        break;
-                    default: throw new IOException("Unknown Cell type " + line.charAt(j));
+                if(resolveGame ==false){
+                    switch(line.charAt(j)){
+                        case '=': cell = new Wall(); break;
+                        case ' ': cell = new Blank(); break;
+                        case 'O': cell = new StorageLocation(); break;
+                        case 'B': cell = new Box(); break;
+                        case 'D': cell = new BoxOnStorage(); break;
+                        case 'X':
+                            cell = new Player();
+                            playerX = j;
+                            playerY = tab.size()/width;
+                            break;
+                        case 'Y':
+                            cell = new PlayerOnStorage();
+                            playerX = j;
+                            playerY = tab.size()/width;
+                            break;
+                        default: throw new IOException("Unknown Cell type " + line.charAt(j));
+                    }
+                }else {
+                    if (resolveGame) {
+                        switch (line.charAt(j)) {
+                            case '#':
+                                cell = new Wall();
+                                break;
+                            case ' ':
+                                cell = new Blank();
+                                break;
+                            case 'D':
+                                cell = new StorageLocation();
+                                break;
+
+                            case 'X':
+                                cell = new Player();
+                                playerX = j;
+                                playerY = tab.size() / width;
+                                break;
+                            case 'Y':
+                                cell = new PlayerOnStorage();
+                                playerX = j;
+                                playerY = tab.size() / width;
+                                break;
+                            default:
+                                throw new IOException("Unknown Cell type " + line.charAt(j));
+
+                        }
+                    }
                 }
                 //On ajoute une cellule
                 tab.add(cell);
@@ -172,6 +203,10 @@ public class Map implements Drawable {
 
     public class ImpossibleMove extends Throwable {
     }
+    private boolean resolveGame = false;
+
+
+
 }
 
 
