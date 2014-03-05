@@ -1,9 +1,7 @@
 import java.io.*;
 import java.util.concurrent.atomic.AtomicLong;
 
-/**
 
- */
 public class Score {
     // Fonctions pour le chronometre
       private  long chrono = 0 ;
@@ -32,7 +30,7 @@ public class Score {
     public void delete_score(){
         score = 0;
     }
-    public void save_score(int level, int currentLevel) throws IOException {
+    public void save_score( int currentLevel) throws IOException {
         /*
         double[][] levels = new double[current_level][];
         BufferedWriter write = null;
@@ -73,9 +71,9 @@ public class Score {
 
 
         try {
-            monFichier = new FileWriter("c:\\score.txt");
+            monFichier = new FileWriter("c:\\score.txt",true);//on ajoute les scores avec "ture"
             tampon = new BufferedWriter(monFichier);
-            String saved = ("level :"+currentLevel+" highest score "+ score);
+            String saved = ("level :"+currentLevel+" highest score "+ score+"\n");
 
 
                 tampon.write(saved);
