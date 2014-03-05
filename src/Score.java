@@ -1,5 +1,5 @@
 import java.io.*;
-import java.util.concurrent.atomic.AtomicLong;
+//import java.util.concurrent.atomic.AtomicLong;
 
 
 public class Score {
@@ -21,17 +21,38 @@ public class Score {
         return score;
     }
 
-    public  void setScore(long score) {
-        score = score;
+    private  void setScore(long score) {
+        score = chrono/1000;
     }
 
-    private long score;
+    private long score = 0;
 
     public void delete_score(){
-        score = 0;
+        //pour les comm voir la méthode save
+        FileWriter monFichier = null;
+        BufferedWriter tampon = null;
+      try{
+          monFichier = new FileWriter("c:\\score.txt");
+          tampon = new BufferedWriter(monFichier);
+          String saved = ("");
+
+
+          tampon.write(saved);
+      } catch (IOException exception) {
+        exception.printStackTrace();
+    } finally {
+        try {
+            tampon.flush();
+            tampon.close();
+            monFichier.close();
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
     }
+    }
+    //on insère les points dans le fichier.
     public void save_score( int currentLevel) throws IOException {
-        /*
+        /************* première solution *************************
         double[][] levels = new double[current_level][];
         BufferedWriter write = null;
         write = new BufferedWriter(new FileWriter("score.txt"));
@@ -52,7 +73,7 @@ public class Score {
         }
         write.close(); // toujours fermer le fichier
         */
-        /* compte le nombre de lignes dans mon fichier
+        /************* compte le nombre de lignes dans mon fichier*****************
         FileInputStream fis = new FileInputStream("score.txt");
         LineNumberReader l = new LineNumberReader(
                 new BufferedReader(new InputStreamReader(fis)));
@@ -63,29 +84,28 @@ public class Score {
         }
         System.out.println(count);
         */
+        //on initialise le flux et le buffer
         FileWriter monFichier = null;
         BufferedWriter tampon = null;
-        String[] scores = new String[currentLevel];
-
-        // Entre des scores dans le tableau
-
-
         try {
             monFichier = new FileWriter("c:\\score.txt",true);//on ajoute les scores avec "ture"
             tampon = new BufferedWriter(monFichier);
-            String saved = ("level :"+currentLevel+" highest score "+ score+"\n");
+            //concaténation de ce qu'on met dans le ficher avec un saut de ligne en fin
+            String saved = ("level :"+ currentLevel +" highest score "+ getScore() +"\n");
 
-
+                //on écrit dans le fichier
                 tampon.write(saved);
-
+                    //débug
                 //System.out.println("Ecriture de : " + saved[i]);
-
+            //débug
           //  System.out.println("Ecriture du fichier terminée.");
 
+            //on gère les exceptions
         } catch (IOException exception) {
             exception.printStackTrace();
         } finally {
             try {
+                //on coupe le flux et ferme le fichier
                 tampon.flush();
                 tampon.close();
                 monFichier.close();

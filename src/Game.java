@@ -8,12 +8,15 @@ import java.util.Scanner;
 ///////// des commentaires s'il te plait ?????
 public class Game implements Drawable {
 
-    private Map currentLevel;
-    private Score score;
 
-    public Game(Map currentLevel) {
-        this.currentLevel = currentLevel;
+    private Map currentMap;
+    private Score score;
+    private int lvl;
+
+    public Game(Map currentMap, int lvlnb) {
+        this.currentMap = currentMap;
         this.score = new Score();
+        this.lvl = lvlnb;
     }
 
     public void start(){
@@ -21,7 +24,7 @@ public class Game implements Drawable {
             Scanner sc = new Scanner(System.in);
             score.goChrono();
             //Tant que le level n'est pas résolu
-            while(!currentLevel.isSolved()) {
+            while(!currentMap.isSolved()) {
                 //Si un caractère a été entré
                 String s = sc.nextLine();
 
@@ -35,6 +38,7 @@ public class Game implements Drawable {
                 draw(System.out);
             }
             score.stopChrono();
+            score.save_score(lvl);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -59,6 +63,6 @@ public class Game implements Drawable {
 
     @Override
     public void draw(OutputStream os) throws IOException {
-        currentLevel.draw(os);
+        currentMap.draw(os);
     }
 }
