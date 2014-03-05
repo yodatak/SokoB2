@@ -1,10 +1,20 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+
 /**
  * Created by germinolegrand on 05/03/14.
  */
 public class Main {
-    public static void main (String[] args){
-        System.out.println("Hello World");
 
+    public static void main (String[] args)  {
+        System.out.println("Hello World");
+        try{
+        FileWriter file = new FileWriter(new File("score.txt"), true);
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
         if(args.length >= 1 && args[0].equals("--create")){
             //mode editeur
         }else{
