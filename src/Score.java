@@ -3,15 +3,15 @@
  */
 public class Score {
     // Fonctions pour le chronometre
-      public static long chrono = 0 ;
+      private  long chrono = 0 ;
 
     // Lancement du chrono
-     public static void Go_Chrono() {
+     public  void goChrono() {
         chrono = java.lang.System.currentTimeMillis() ;
     }
 
     // Arret du chrono
-     public static void Stop_Chrono() {
+     public  void stopChrono() {
         long chrono2 = java.lang.System.currentTimeMillis() ;
         long temps = chrono2 - chrono ;
         setScore(temps) ;
@@ -20,7 +20,7 @@ public class Score {
         return score;
     }
 
-    public static void setScore(long score) {
+    public  void setScore(long score) {
         score = score;
     }
 

@@ -24,7 +24,7 @@ class Main {
             //On lance le jeu
             game.start();
             //on lance le chrono pour le score
-            Score.Go_Chrono();
+
         }
     }
 }

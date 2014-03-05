@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Game implements Drawable {
 
     private Map currentLevel;
-
+    private Score score;
     public Game(Map currentLevel) {
         this.currentLevel = currentLevel;
     }
@@ -16,6 +16,8 @@ public class Game implements Drawable {
     public void start(){
         try {
             Scanner sc = new Scanner(System.in);
+
+            score.goChrono();
             //Tant que la level n'est pas résolu
             while(!currentLevel.isSolved()) {
                 //Si un caractère a été entré
@@ -29,6 +31,7 @@ public class Game implements Drawable {
                     draw();
                 }
             }
+            score.stopChrono();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -67,7 +70,5 @@ public class Game implements Drawable {
     public void draw() {
         currentLevel.draw();
     }
-    private void check_Collision(Cell, int Cell.type){
 
-    }
 }
