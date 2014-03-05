@@ -11,8 +11,8 @@ public class Main {
     public static void main (String[] args)  {
         System.out.println("Hello World");
         try{
-        FileWriter file = new FileWriter(new File("score.txt"), true);
-            FileWriter file = new FileWriter(new File("levels.sok"), true);
+        FileWriter fileScore = new FileWriter(new File("score.txt"), true);
+            FileWriter fileMap = new FileWriter(new File("levels.sok"), true);
         }catch (IOException e) {
             e.printStackTrace();
         }
