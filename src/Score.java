@@ -21,14 +21,33 @@ public class Score {
         return score;
     }
 
-    public  void setScore(long score) {
-        score = score;
+    private  void setScore(long score) {
+        score = chrono/1000;
     }
 
     private long score;
 
     public void delete_score(){
-        score = 0;
+        FileWriter monFichier = null;
+        BufferedWriter tampon = null;
+      try{
+          monFichier = new FileWriter("c:\\score.txt");//on ajoute les scores avec "ture"
+          tampon = new BufferedWriter(monFichier);
+          String saved = ("");
+
+
+          tampon.write(saved);
+      } catch (IOException exception) {
+        exception.printStackTrace();
+    } finally {
+        try {
+            tampon.flush();
+            tampon.close();
+            monFichier.close();
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+    }
     }
     public void save_score( int currentLevel) throws IOException {
         /*
@@ -65,15 +84,10 @@ public class Score {
         */
         FileWriter monFichier = null;
         BufferedWriter tampon = null;
-        String[] scores = new String[currentLevel];
-
-        // Entre des scores dans le tableau
-
-
         try {
             monFichier = new FileWriter("c:\\score.txt",true);//on ajoute les scores avec "ture"
             tampon = new BufferedWriter(monFichier);
-            String saved = ("level :"+currentLevel+" highest score "+ score+"\n");
+            String saved = ("level :"+ currentLevel +" highest score "+ score +"\n");
 
 
                 tampon.write(saved);
