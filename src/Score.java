@@ -40,20 +40,22 @@ public class Score {
 
         BufferedReader lecteurFichier = null;
         lecteurFichier = new BufferedReader(new FileReader("score.txt"));
-           String line;
+           String line="";
         int lvls = Integer.parseInt(lecteurFichier.readLine());
         while ((line = lecteurFichier.readLine()) != null)
         {
-            for (int i = 0; i <= current_level; i++)
-            {
-                for (int j = 0; j <= levels[i].length; i++)
+
+
+                for (int j = 0; j <= levels[current_level].length; j++)
                 {
-                    if(levels[i][j] != 0){
-                        levels[i][j] = chrono / 1000;
+                    if(levels[current_level][j] != 0){
+                        levels[current_level][j] = chrono / 1000;
+                    }else{
+
                     }
                 }
-            }
-            System.out.println(score);
+
+            System.out.println(line);
         }
         lecteurFichier.close(); // toujours fermer le fichier
     }
