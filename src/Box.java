@@ -4,6 +4,6 @@ import java.io.OutputStream;
 public class Box extends Cell  {
     @Override
     public void draw(OutputStream os) throws IOException {
-
+        os.write('B');
     }
 }

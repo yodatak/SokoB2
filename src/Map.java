@@ -34,7 +34,7 @@ public class Map implements Drawable {
             for(int j = 0; j < width; ++j){
                 tab.set(i * width + j, new Blank());
             }
-            is.skip(1);
+            is.skip('\n');
         }
     }
 

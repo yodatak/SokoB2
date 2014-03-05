@@ -9,7 +9,7 @@ public class Main {
             //mode editeur
         }else{
             //mode jeu
-            Map level = null;
+            Map level = new Map();
 
             if(args.length >= 2 && args[0].equals("--level")){
                 //On charge le niveau demandé

@@ -8,6 +8,6 @@ public class Wall extends Cell {
 
     @Override
     public void draw(OutputStream os) throws IOException {
-
+        os.write('=');
     }
 }

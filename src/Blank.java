@@ -7,6 +7,6 @@ import java.io.OutputStream;
 public class Blank extends Cell {
     @Override
     public void draw(OutputStream os) throws IOException {
-
+        os.write(' ');
     }
 }

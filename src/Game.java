@@ -13,6 +13,7 @@ public class Game implements Drawable {
 
     public Game(Map currentLevel) {
         this.currentLevel = currentLevel;
+        this.score = new Score();
     }
 
     public void start(){
