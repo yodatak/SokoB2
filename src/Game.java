@@ -44,29 +44,17 @@ public class Game implements Drawable {
     Execute l'action correspondante au caractère
      */
     private void playerCommand(char b) throws IOException {
-        switch (b){
-            case 'q': goLeft();     break;
-            case 'd': goRight();    break;
-            case 'z': goUp();       break;
-            case 's': goDown();     break;
-            default: /*rien*/       break;
+        try{
+            switch (b){
+                case 'q': currentLevel.movePlayer(-1,0);    break;
+                case 'd': currentLevel.movePlayer(+1,0);    break;
+                case 'z': currentLevel.movePlayer(0,-1);    break;
+                case 's': currentLevel.movePlayer(0,-1);    break;
+                default: /*rien*/                           break;
+            }
+        }catch(Map.ImpossibleMove im){
+            System.out.println("Deplacement impossible !");
         }
-    }
-
-    private void goLeft() {
-
-    }
-
-    private void goRight() {
-
-    }
-
-    private void goUp() {
-
-    }
-
-    private void goDown() {
-
     }
 
     @Override
