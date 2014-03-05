@@ -23,6 +23,10 @@ public class Game implements Drawable {
     public void start(){
         try {
             Scanner sc = new Scanner(System.in);
+
+            //On affiche le jeu
+            draw(System.out);
+
             score.goChrono();
             //Tant que le level n'est pas résolu
             while(!currentMap.isSolved()) {

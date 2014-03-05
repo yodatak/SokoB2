@@ -116,6 +116,21 @@ public class Map implements Drawable {
     }
 
     /*
+    Ignore le level au lieu de le charger
+     */
+    public void fakeLoad(InputStream is) {
+        Scanner sc = new Scanner(is);
+
+        String line = null;
+
+        do{
+            //On récupère la ligne
+            line = sc.nextLine();
+        }while(line.length() > 0);
+    }
+
+
+    /*
     Détermine si la map est résolue
      */
     public boolean isSolved() {
