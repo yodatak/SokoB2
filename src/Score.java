@@ -6,7 +6,7 @@ public class Score {
       public long chrono = 0 ;
 
     // Lancement du chrono
-     public void Go_Chrono() {
+     public static void Go_Chrono() {
         chrono = java.lang.System.currentTimeMillis() ;
     }
 
