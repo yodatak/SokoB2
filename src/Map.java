@@ -1,15 +1,16 @@
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 //implémentation des vectors
 
 /**
  * Created by Lachenayefred on 27/02/14.
  */
 
-public class Map {
+public class Map implements Drawable {
 
     private int hauteur ;
     private int largeur ;
-    Vector tab=new Vector();
+    List<Cell> tab=new ArrayList<Cell>();
     /////////////////attributs de class map
 
     public void set_Haut(int hauteur) { //////////// set hauteur
@@ -26,6 +27,24 @@ public class Map {
 
     public int get_Larg() { //////////// get largeur
         return largeur;
+    }
+
+    /*
+    Détermine si la map est résolue
+     */
+    public boolean isSolved() {
+        for(Cell c : tab){
+            //Si on trouve une StorageLocation la map n'est pas résolue
+            if(c instanceof StorageLocation)
+                return false;
+        }
+        //Dans le cas où il n'y a plus aucune StorageLocation, la map est résolue
+        return true;
+    }
+
+    @Override
+    public void draw() {
+
     }
 
     //draw sera faite ce soir :)
