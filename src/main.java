@@ -23,6 +23,7 @@ class Main {
 
             //On lance le jeu
             game.start();
+            Score.Go_Chrono();
         }
     }
 }
