@@ -1,6 +1,4 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
@@ -35,14 +33,14 @@ public class Score {
         score = 0;
     }
     public void save_score(int level, int current_level) throws IOException {
-        double[][] levels = new double[0][];
+        double[][] levels = new double[current_level][];
 
 
-        BufferedReader lecteurFichier = null;
-        lecteurFichier = new BufferedReader(new FileReader("score.txt"));
+        BufferedWriter write = null;
+        write = new BufferedWriter(new FileWriter("score.txt"));
            String line="";
-        int lvls = Integer.parseInt(lecteurFichier.readLine());
-        while ((line = lecteurFichier.readLine()) != null)
+        int lvls = Integer.parseInt(write.writeLine());
+        while ((line = write.FileWriter()) != null)
         {
 
 
@@ -50,14 +48,13 @@ public class Score {
                 {
                     if(levels[current_level][j] != 0){
                         levels[current_level][j] = chrono / 1000;
-                    }else{
-
                     }
+
                 }
 
             System.out.println(line);
         }
-        lecteurFichier.close(); // toujours fermer le fichier
+        write.close(); // toujours fermer le fichier
     }
 
 
