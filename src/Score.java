@@ -3,7 +3,7 @@
  */
 public class Score {
     // Fonctions pour le chronometre
-      public long chrono = 0 ;
+      public static long chrono = 0 ;
 
     // Lancement du chrono
      public static void Go_Chrono() {
@@ -20,8 +20,8 @@ public class Score {
         return score;
     }
 
-    public void setScore(long score) {
-        this.score = score;
+    public static void setScore(long score) {
+        score = score;
     }
 
     private long score;
