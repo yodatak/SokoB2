@@ -10,11 +10,24 @@ public class Map implements Drawable {
 
     private int height = 0;
     private int width = 0;
-    private ArrayList<Cell> tab = null;
+    private ArrayList<Cell> tab = new ArrayList<Cell>();
 
     private int playerX = 0;
     private int playerY = 0;
     /////////////////attributs de class map
+
+    Map(Map other){
+        this.height = other.height;
+        this.width = other.width;
+        this.playerX = other.playerX;
+        this.playerY = other.playerY;
+
+        for(Cell c : other.tab){
+            this.tab.add(c);
+        }
+    }
+
+    public Map(){}
 
     public int getHeight() {
         return height;
@@ -29,8 +42,6 @@ public class Map implements Drawable {
      */
     public void load(InputStream is) throws IOException {
         Scanner sc = new Scanner(is);
-
-        tab = new ArrayList<Cell>();
 
         String line = null;
 

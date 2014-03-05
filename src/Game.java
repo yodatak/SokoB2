@@ -8,13 +8,14 @@ import java.util.Scanner;
 ///////// des commentaires s'il te plait ?????
 public class Game implements Drawable {
 
-
+    private Map initialMap;
     private Map currentMap;
     private Score score;
     private int lvl;
 
     public Game(Map currentMap, int lvlnb) {
-        this.currentMap = currentMap;
+        this.initialMap = currentMap;
+        this.currentMap = new Map(currentMap);
         this.score = new Score();
         this.lvl = lvlnb;
     }
@@ -54,11 +55,16 @@ public class Game implements Drawable {
                 case 'd': currentMap.movePlayer(+1, 0);    break;
                 case 'z': currentMap.movePlayer(0, -1);    break;
                 case 's': currentMap.movePlayer(0, +1);    break;
-                default: /*rien*/                           break;
+                case 'x': reloadMap();                     break;
+                default: /*rien*/                          break;
             }
         }catch(Map.ImpossibleMove im){
             System.out.println("Deplacement impossible !");
         }
+    }
+
+    private void reloadMap() {
+        currentMap = new Map(initialMap);
     }
 
     @Override
