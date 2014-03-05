@@ -124,9 +124,9 @@ public class Map implements Drawable {
 
             //On supprime l'ancienne box
             if(futurePlayerCell instanceof Box)
-                setCell(playerX + 2*offsetX, playerY + 2*offsetY, new Blank());
+                setCell(playerX + offsetX, playerY + offsetY, new Blank());
             else //if(futurePlayerCell instanceof BoxOnStorage)
-                setCell(playerX + 2*offsetX, playerY + 2*offsetY, new StorageLocation());
+                setCell(playerX + offsetX, playerY + offsetY, new StorageLocation());
         }
 
         //position du nouveau joueur
