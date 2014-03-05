@@ -29,6 +29,7 @@ public class Game implements Drawable {
                     draw();
                 }
             }
+            
         } catch (IOException e) {
             e.printStackTrace();
         }
