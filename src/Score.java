@@ -15,14 +15,10 @@ public class Score {
      public  void stopChrono() {
         long chrono2 = java.lang.System.currentTimeMillis() ;
         long temps = chrono2 - chrono ;
-        setScore(temps) ;
+        this.score = temps/1000;
     }
     public long getScore() {
         return score;
-    }
-
-    private  void setScore(long score) {
-        score = chrono/1000;
     }
 
     private long score = 0;
@@ -46,6 +42,8 @@ public class Score {
             tampon.close();
             monFichier.close();
         } catch (IOException e1) {
+            e1.printStackTrace();
+        } catch (NullPointerException e1) {
             e1.printStackTrace();
         }
     }
@@ -88,7 +86,7 @@ public class Score {
         FileWriter monFichier = null;
         BufferedWriter tampon = null;
         try {
-            monFichier = new FileWriter("c:\\score.txt",true);//on ajoute les scores avec "ture"
+            monFichier = new FileWriter("score.txt",true);//on ajoute les scores avec "ture"
             tampon = new BufferedWriter(monFichier);
             //concaténation de ce qu'on met dans le ficher avec un saut de ligne en fin
             String saved = ("level :"+ currentLevel +" highest score "+ getScore() +"\n");

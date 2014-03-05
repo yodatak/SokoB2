@@ -40,25 +40,24 @@ public class Map implements Drawable {
     /*
     Charge une map en mémoire
      */
-    public void load(InputStream is) throws IOException {
+    public void load(InputStream is, String endLineDelimiter) throws IOException {
         Scanner sc = new Scanner(is);
 
-        String line = null;
+        String line;
 
-        do{
-            //On récupère la ligne
-            line = sc.nextLine();
+        //Tant que la ligne récupérée n'est pas celle qui termine
+        while(!(line = sc.nextLine()).equals(endLineDelimiter)){
 
             if(width == 0)//Si on n'a pas encore récupéré la largeur
                 width = line.length();
-            else if(line.length() >0 && width != line.length())//Si la largeur a changé
+            else if(width != line.length())//Si la largeur a changé
                 throw new IOException("All lines are not same length");
 
             //Pour chaque caractère de la ligne
             for(int j = 0; j < line.length(); ++j){
 
                 Cell cell = null;
-                if(resolveGame ==false){
+                if(!resolveGame){
                     switch(line.charAt(j)){
                         case '=': cell = new Wall(); break;
                         case ' ': cell = new Blank(); break;
@@ -109,7 +108,7 @@ public class Map implements Drawable {
                 //On ajoute une cellule
                 tab.add(cell);
             }
-        }while(line.length() > 0);
+        }
 
         //On calcule la hauteur en fonction du nombre total de cellules
         height = tab.size()/width;
@@ -121,7 +120,7 @@ public class Map implements Drawable {
     public void fakeLoad(InputStream is) {
         Scanner sc = new Scanner(is);
 
-        String line = null;
+        String line;
 
         do{
             //On récupère la ligne
@@ -129,14 +128,13 @@ public class Map implements Drawable {
         }while(line.length() > 0);
     }
 
-
     /*
     Détermine si la map est résolue
      */
     public boolean isSolved() {
         for(Cell c : tab){
-            //Si on trouve une StorageLocation la map n'est pas résolue
-            if(c instanceof StorageLocation)
+            //Si on trouve une StorageLocation ou un PlayerOnStorage la map n'est pas résolue
+            if(c instanceof StorageLocation || c instanceof PlayerOnStorage)
                 return false;
         }
         //Dans le cas où il n'y a plus aucune StorageLocation, la map est résolue
@@ -219,6 +217,7 @@ public class Map implements Drawable {
 
     @Override
     public void draw(OutputStream os) throws IOException {
+        os.write('\n');
         for(int i = 0; i < height; ++i){
             for(int j = 0; j < width; ++j){
                 tab.get(i * width + j).draw(os);

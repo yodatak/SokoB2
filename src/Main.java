@@ -12,6 +12,13 @@ public class Main {
 
         if(args.length >= 1 && args[0].equals("--create")){
             //mode editeur
+            Map map = new Map();
+            try(FileOutputStream fis = new FileOutputStream(fileMap, true)) {
+                map.load(System.in, "P");
+                map.draw(fis);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }else{
             //mode jeu
             Map map = new Map();
@@ -23,16 +30,12 @@ public class Main {
                 lvlnb = Integer.parseInt(args[1]);
             }
 
-            for(int lvlCount = 1; lvlCount < lvlnb; ++lvlCount){
-                try {
-                    map.fakeLoad(new FileInputStream(fileMap));
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
+            try(FileInputStream fis = new FileInputStream(fileMap)) {
+                for(int lvlCount = 1; lvlCount < lvlnb; ++lvlCount){
+                    map.fakeLoad(fis);
                 }
-            }
 
-            try {
-                map.load(new FileInputStream(fileMap));
+                map.load(fis, "");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -42,8 +45,6 @@ public class Main {
 
             //On lance le jeu
             game.start();
-            //on lance le chrono pour le score
-
         }
     }
 }
