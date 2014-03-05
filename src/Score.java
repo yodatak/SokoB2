@@ -1,5 +1,5 @@
 import java.io.*;
-import java.util.concurrent.atomic.AtomicLong;
+//import java.util.concurrent.atomic.AtomicLong;
 
 
 public class Score {
@@ -50,7 +50,7 @@ public class Score {
     }
     }
     public void save_score( int currentLevel) throws IOException {
-        /*
+        /************* première solution *************************
         double[][] levels = new double[current_level][];
         BufferedWriter write = null;
         write = new BufferedWriter(new FileWriter("score.txt"));
@@ -71,7 +71,7 @@ public class Score {
         }
         write.close(); // toujours fermer le fichier
         */
-        /* compte le nombre de lignes dans mon fichier
+        /************* compte le nombre de lignes dans mon fichier*****************
         FileInputStream fis = new FileInputStream("score.txt");
         LineNumberReader l = new LineNumberReader(
                 new BufferedReader(new InputStreamReader(fis)));
@@ -82,12 +82,13 @@ public class Score {
         }
         System.out.println(count);
         */
+
         FileWriter monFichier = null;
         BufferedWriter tampon = null;
         try {
             monFichier = new FileWriter("c:\\score.txt",true);//on ajoute les scores avec "ture"
             tampon = new BufferedWriter(monFichier);
-            String saved = ("level :"+ currentLevel +" highest score "+ score +"\n");
+            String saved = ("level :"+ currentLevel +" highest score "+ getScore() +"\n");
 
 
                 tampon.write(saved);
