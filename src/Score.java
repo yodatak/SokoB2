@@ -32,7 +32,7 @@ public class Score {
         FileWriter monFichier = null;
         BufferedWriter tampon = null;
       try{
-          monFichier = new FileWriter("c:\\score.txt");
+          monFichier = new FileWriter("score.txt");
           tampon = new BufferedWriter(monFichier);
           String saved = ("");
 
