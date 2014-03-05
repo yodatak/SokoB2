@@ -60,6 +60,7 @@ public class Game implements Drawable {
                 case 'z': currentMap.movePlayer(0, -1);    break;
                 case 's': currentMap.movePlayer(0, +1);    break;
                 case 'x': reloadMap();                     break;
+                case 't': currentMap.setResolveGame(true); break;
                 default: /*rien*/                          break;
             }
         }catch(Map.ImpossibleMove im){

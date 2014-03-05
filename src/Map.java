@@ -229,6 +229,11 @@ public class Map implements Drawable {
 
     public class ImpossibleMove extends Throwable {
     }
+
+    public void setResolveGame(boolean resolveGame) {
+        this.resolveGame = resolveGame;
+    }
+
     private boolean resolveGame = false;
 
 
