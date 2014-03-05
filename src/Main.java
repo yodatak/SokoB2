@@ -12,6 +12,7 @@ public class Main {
         System.out.println("Hello World");
         try{
         FileWriter file = new FileWriter(new File("score.txt"), true);
+            FileWriter file = new FileWriter(new File("levels.sok"), true);
         }catch (IOException e) {
             e.printStackTrace();
         }
