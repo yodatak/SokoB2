@@ -40,7 +40,7 @@ public class Score {
         write = new BufferedWriter(new FileWriter("score.txt"));
            String line="";
         int lvls = Integer.parseInt(write.writeLine());
-        while ((line = write.writeLine()) != null)
+        while ((line = write.FileWriter()) != null)
         {
 
 
