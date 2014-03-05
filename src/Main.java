@@ -27,6 +27,11 @@ public class Main {
                 System.out.println("Play level" + args[1]);
             }else{
                 //On charge le premier niveau
+                try {
+                    level.load(System.in);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
 
             Game game = new Game(level);

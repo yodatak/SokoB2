@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Game implements Drawable {
 
     private Map currentLevel;
-    private  Score score;
+    private Score score;
 
     public Game(Map currentLevel) {
         this.currentLevel = currentLevel;
@@ -20,18 +20,19 @@ public class Game implements Drawable {
         try {
             Scanner sc = new Scanner(System.in);
             score.goChrono();
-            //Tant que la level n'est pas résolu
+            //Tant que le level n'est pas résolu
             while(!currentLevel.isSolved()) {
                 //Si un caractère a été entré
-                if(sc.hasNextByte()) {
-                    Byte b = sc.nextByte();
+                String s = sc.nextLine();
 
-                    //On joue l'action correspondante
-                    playerCommand(b);
+                if(s.length() == 0)
+                    continue;
 
-                    //On affiche le jeu
-                    draw(System.out);
-                }
+                //On joue l'action correspondante
+                playerCommand(s.charAt(0));
+
+                //On affiche le jeu
+                draw(System.out);
             }
             score.stopChrono();
         } catch (IOException e) {
@@ -42,7 +43,7 @@ public class Game implements Drawable {
     /*
     Execute l'action correspondante au caractère
      */
-    private void playerCommand(Byte b) throws IOException {
+    private void playerCommand(char b) throws IOException {
         switch (b){
             case 'q': goLeft();     break;
             case 'd': goRight();    break;
