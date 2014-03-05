@@ -25,13 +25,14 @@ public class Score {
         score = chrono/1000;
     }
 
-    private long score;
+    private long score = 0;
 
     public void delete_score(){
+        //pour les comm voir la méthode save
         FileWriter monFichier = null;
         BufferedWriter tampon = null;
       try{
-          monFichier = new FileWriter("c:\\score.txt");//on ajoute les scores avec "ture"
+          monFichier = new FileWriter("c:\\score.txt");
           tampon = new BufferedWriter(monFichier);
           String saved = ("");
 
@@ -49,6 +50,7 @@ public class Score {
         }
     }
     }
+    //on insère les points dans le fichier.
     public void save_score( int currentLevel) throws IOException {
         /************* première solution *************************
         double[][] levels = new double[current_level][];
@@ -82,25 +84,28 @@ public class Score {
         }
         System.out.println(count);
         */
-
+        //on initialise le flux et le buffer
         FileWriter monFichier = null;
         BufferedWriter tampon = null;
         try {
             monFichier = new FileWriter("c:\\score.txt",true);//on ajoute les scores avec "ture"
             tampon = new BufferedWriter(monFichier);
+            //concaténation de ce qu'on met dans le ficher avec un saut de ligne en fin
             String saved = ("level :"+ currentLevel +" highest score "+ getScore() +"\n");
 
-
+                //on écrit dans le fichier
                 tampon.write(saved);
-
+                    //débug
                 //System.out.println("Ecriture de : " + saved[i]);
-
+            //débug
           //  System.out.println("Ecriture du fichier terminée.");
 
+            //on gère les exceptions
         } catch (IOException exception) {
             exception.printStackTrace();
         } finally {
             try {
+                //on coupe le flux et ferme le fichier
                 tampon.flush();
                 tampon.close();
                 monFichier.close();
