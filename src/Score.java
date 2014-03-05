@@ -32,17 +32,15 @@ public class Score {
     public void delete_score(){
         score = 0;
     }
-    public void save_score(int level, int current_level) throws IOException {
+    public void save_score(int level, int currentLevel) throws IOException {
+        /*
         double[][] levels = new double[current_level][];
-
-
         BufferedWriter write = null;
         write = new BufferedWriter(new FileWriter("score.txt"));
            String line="";
         int lvls = Integer.parseInt(write.writeLine());
         while ((line = write.FileWriter()) != null)
         {
-
 
                 for (int j = 0; j <= levels[current_level].length; j++)
                 {
@@ -55,6 +53,48 @@ public class Score {
             System.out.println(line);
         }
         write.close(); // toujours fermer le fichier
+        */
+        /* compte le nombre de lignes dans mon fichier
+        FileInputStream fis = new FileInputStream("score.txt");
+        LineNumberReader l = new LineNumberReader(
+                new BufferedReader(new InputStreamReader(fis)));
+        int count = 0;
+        while ((str=l.readLine())!=null)
+        {
+            count = l.getLineNumber();
+        }
+        System.out.println(count);
+        */
+        FileWriter monFichier = null;
+        BufferedWriter tampon = null;
+        String[] scores = new String[currentLevel];
+
+        // Entre des scores dans le tableau
+
+
+        try {
+            monFichier = new FileWriter("c:\\score.txt");
+            tampon = new BufferedWriter(monFichier);
+            String saved = ("level :"+currentLevel+" highest score "+ score);
+
+
+                tampon.write(saved);
+
+                //System.out.println("Ecriture de : " + saved[i]);
+
+          //  System.out.println("Ecriture du fichier terminée.");
+
+        } catch (IOException exception) {
+            exception.printStackTrace();
+        } finally {
+            try {
+                tampon.flush();
+                tampon.close();
+                monFichier.close();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+        }
     }
 
 
