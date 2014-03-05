@@ -1,3 +1,4 @@
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 //implémentation des vectors
@@ -8,25 +9,33 @@ import java.util.List;
 
 public class Map implements Drawable {
 
-    private int hauteur ;
-    private int largeur ;
-    List<Cell> tab=new ArrayList<Cell>();
+    private int height;
+    private int width;
+    private ArrayList<Cell> tab;
     /////////////////attributs de class map
 
-    public void set_Haut(int hauteur) { //////////// set hauteur
-        this.hauteur = hauteur;
+    public int getHeight() {
+        return height;
     }
 
-    public void set_Larg(int largeur) { /////////// set largeur
-        this.largeur = largeur;
+    public int getWidth() {
+        return width;
     }
 
-    public int get_Haut() {   /////////////// get hauteur
-        return hauteur;
-    }
+    public void load(InputStream is) throws IOException {
+        DataInputStream dis = new DataInputStream(is);
 
-    public int get_Larg() { //////////// get largeur
-        return largeur;
+        height = dis.readInt();
+        width = dis.readInt();
+
+        tab = new ArrayList<Cell>(height * width);
+
+        for(int i = 0; i < height; ++i){
+            for(int j = 0; j < width; ++j){
+                tab.set(i * width + j, new Blank());
+            }
+            is.skip(1);
+        }
     }
 
     /*
@@ -39,14 +48,17 @@ public class Map implements Drawable {
                 return false;
         }
         //Dans le cas où il n'y a plus aucune StorageLocation, la map est résolue
-
         return true;
-
     }
 
     @Override
-    public void draw() {
-
+    public void draw(OutputStream os) throws IOException {
+        for(int i = 0; i < height; ++i){
+            for(int j = 0; j < width; ++j){
+                tab.get(i * width + j).draw(os);
+            }
+            os.write('\n');
+        }
     }
 
     //draw sera faite ce soir :)

@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.io.OutputStream;
 import java.util.Scanner;
 
 /**
@@ -28,7 +29,7 @@ public class Game implements Drawable {
                     playerCommand(b);
 
                     //On affiche le jeu
-                    draw();
+                    draw(System.out);
                 }
             }
             score.stopChrono();
@@ -67,7 +68,7 @@ public class Game implements Drawable {
     }
 
     @Override
-    public void draw() {
-        currentLevel.draw();
+    public void draw(OutputStream os) throws IOException {
+        currentLevel.draw(os);
     }
 }
