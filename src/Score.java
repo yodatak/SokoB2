@@ -30,7 +30,7 @@ public class Score {
         score = 0;
     }
     public void save_score(long score){
-        setScore(score);
+        getScore();
     }
 
 
