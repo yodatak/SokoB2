@@ -11,7 +11,7 @@ public class Main {
     public static void main (String[] args)  {
         System.out.println("Hello World");
         try{
-            //fichiers des scores et des maps ouvert en version "ajout"
+            //fichiers des scores et des maps ouverts en version "ajout"
         FileWriter fileScore = new FileWriter(new File("score.txt"), true);
             FileWriter fileMap = new FileWriter(new File("levels.sok"), true);
         }catch (IOException e) {
@@ -26,6 +26,7 @@ public class Main {
             if(args.length >= 2 && args[0].equals("--level")){
                 //On charge le niveau demandé dans le tab arg[]
                 System.out.println("Play level" + args[1]);
+                //args est un tab de string donc -->
                 lvlnb = Integer.parseInt(args[1]);
             }else{
                 //On charge le premier niveau
@@ -35,7 +36,7 @@ public class Main {
                     e.printStackTrace();
                 }
             }
-
+            //le game a deux paramètres une map et le n° du level
             Game game = new Game(map1, lvlnb);
 
             //On lance le jeu

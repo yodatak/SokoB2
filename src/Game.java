@@ -50,10 +50,10 @@ public class Game implements Drawable {
     private void playerCommand(char b) throws IOException {
         try{
             switch (b){
-                case 'q': currentLevel.movePlayer(-1,0);    break;
-                case 'd': currentLevel.movePlayer(+1,0);    break;
-                case 'z': currentLevel.movePlayer(0,-1);    break;
-                case 's': currentLevel.movePlayer(0,-1);    break;
+                case 'q': currentMap.movePlayer(-1, 0);    break;
+                case 'd': currentMap.movePlayer(+1, 0);    break;
+                case 'z': currentMap.movePlayer(0, -1);    break;
+                case 's': currentMap.movePlayer(0, -1);    break;
                 default: /*rien*/                           break;
             }
         }catch(Map.ImpossibleMove im){
