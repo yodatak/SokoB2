@@ -67,4 +67,7 @@ public class Game implements Drawable {
     public void draw() {
         currentLevel.draw();
     }
+    private void check_Collision(Cell, int Cell.type){
+
+    }
 }
