@@ -11,7 +11,7 @@ public class Score {
     }
 
     // Arret du chrono
-     public void Stop_Chrono() {
+     public static void Stop_Chrono() {
         long chrono2 = java.lang.System.currentTimeMillis() ;
         long temps = chrono2 - chrono ;
         setScore(temps) ;

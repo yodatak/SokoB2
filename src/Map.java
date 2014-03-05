@@ -39,7 +39,9 @@ public class Map implements Drawable {
                 return false;
         }
         //Dans le cas où il n'y a plus aucune StorageLocation, la map est résolue
+        Score.Stop_Chrono();
         return true;
+
     }
 
     @Override
