@@ -6,9 +6,13 @@ import java.io.*;
 public class Main {
 
     public static void main (String[] args)  {
-        System.out.println("Hello World");
+        //System.out.println("Hello World");
+        try{
+        FileWriter File = null;
+        BufferedWriter tampon = null;
         //fichiers des maps ouverts en version "ajout"
         File fileMap = new File("levels.sok");
+        tampon = new BufferedWriter(File);
 
         if(args.length >= 1 && args[0].equals("--create")){
             //mode editeur
@@ -45,6 +49,18 @@ public class Main {
 
             //On lance le jeu
             game.start();
+        }
+        } catch (IOException exception) {
+            exception.printStackTrace();
+        } finally {
+            try {
+                //on coupe le flux et ferme le fichier
+                tampon.flush();
+                tampon.close();
+                File.close();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
         }
     }
 }
