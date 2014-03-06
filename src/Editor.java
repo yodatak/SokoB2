@@ -1,6 +1,4 @@
-/**
- * Created by yoyonice on 05/03/14.
- */
+
 public class Editor {
     public void start_edit(){
         //le player entre dans le mode editor on pose alors la question où il veut mettre ses bloc

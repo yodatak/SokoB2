@@ -1,9 +1,7 @@
 import java.io.IOException;
 import java.io.OutputStream;
 
-/**
- * Created by yoyonice on 05/03/14.
- */
+
 public class Blank extends Cell {
     @Override
     public boolean isWalkable() {

@@ -2,9 +2,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- * Created by Lachenayefred on 27/02/14.
- */
+
 
 public class Map implements Drawable {
 

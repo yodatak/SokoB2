@@ -2,10 +2,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Scanner;
 
-/**
- * Created by germinolegrand on 27/02/14.
- */
-///////// des commentaires s'il te plait ?????
+
 public class Game implements Drawable {
 
     private Map initialMap;

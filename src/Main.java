@@ -3,9 +3,7 @@ import java.lang.Package;
 
 import java.io.*;
 
-/**
- * Created by germinolegrand on 05/03/14.
- */
+
 public class Main {
 
     public static void main (String[] args)  {
