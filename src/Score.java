@@ -89,7 +89,7 @@ public class Score {
             monFichier = new FileWriter("score.txt",true);//on ajoute les scores avec "ture"
             tampon = new BufferedWriter(monFichier);
             //concaténation de ce qu'on met dans le ficher avec un saut de ligne en fin
-            String saved = ("level :"+ currentLevel +" highest score "+ getScore() +"secondes"+"\n");
+            String saved = ("level :"+ currentLevel +" highest score "+ getScore() +" secondes"+"\n");
 
                 //on écrit dans le fichier
                 tampon.write(saved);

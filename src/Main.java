@@ -1,3 +1,6 @@
+import com.sun.java.util.jar.pack.*;
+import java.lang.Package;
+
 import java.io.*;
 
 /**
@@ -8,11 +11,12 @@ public class Main {
     public static void main (String[] args)  {
         //System.out.println("Hello World");
         try{
-        FileWriter File = null;
+        FileWriter monFichier = null;
         BufferedWriter tampon = null;
+            monFichier = new FileWriter("score.txt");
         //fichiers des maps ouverts en version "ajout"
         File fileMap = new File("levels.sok");
-        tampon = new BufferedWriter(File);
+        tampon = new BufferedWriter(monFichier);
 
         if(args.length >= 1 && args[0].equals("--create")){
             //mode editeur
@@ -52,15 +56,6 @@ public class Main {
         }
         } catch (IOException exception) {
             exception.printStackTrace();
-        } finally {
-            try {
-                //on coupe le flux et ferme le fichier
-                tampon.flush();
-                tampon.close();
-                File.close();
-            } catch (IOException e1) {
-                e1.printStackTrace();
-            }
         }
     }
 }
